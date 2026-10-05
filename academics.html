@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreehari M | Academics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="academics.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="container my-5">
+
+  <div class="page-heading">
+    <p class="eyebrow">Academic Record</p>
+    <h1>Education</h1>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="vidya1.jpg" class="card-img-top" alt="Vidya Academy of Science and Technology logo">
+        <div class="card-body text-center">
+          <p class="eyebrow small-eyebrow">Graduation</p>
+          <h5 class="card-title">B.Tech, Electronics &amp; Communication Engineering</h5>
+          <p class="card-text card-institute">Vidya Academy of Science and Technology, Thrissur<br>APJAKTU</p>
+          <p class="score-badge">CGPA&nbsp;7.15</p>
+          <a class="btn btn-primary mt-auto" href="B. tech.pdf" target="_blank">View Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="ghss_mezhathur.jpg" class="card-img-top" alt="GHSS Mezhathur logo">
+        <div class="card-body text-center">
+          <p class="eyebrow small-eyebrow">Higher Secondary</p>
+          <h5 class="card-title">Biology Science</h5>
+          <p class="card-text card-institute">GHSS Mezhathur<br>DHSE Kerala</p>
+          <p class="score-badge">97.3%</p>
+          <a class="btn btn-primary mt-auto" href="12th certificate (1).pdf" target="_blank">View Certificate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="tems.png" class="card-img-top" alt="Trithala English Medium School logo">
+        <div class="card-body text-center">
+          <p class="eyebrow small-eyebrow">Secondary</p>
+          <h5 class="card-title">Science Stream</h5>
+          <p class="card-text card-institute">Trithala English Medium School<br>CBSE</p>
+          <p class="score-badge">92.3%</p>
+          <a class="btn btn-primary mt-auto" href="SSLC CERTIFICATE ORIGINAL (1).pdf" target="_blank">View Certificate</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  
+</div>
+
+<footer class="footer">
+  <p>&copy; 2026 Sreehari M. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+    });
+</script>
+</body>
+</html>

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080a14">
     <title>Sreehari M | ProjectIV | Recipe Manage - CRUD </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="recipemanager.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 
@@ -36,7 +37,7 @@
       <div class="col-lg-4 col-md-6 col-12 mb-3">
         <div class="card"><img src="Crud3.png" class="card-img-top" alt="Recipe Manager image" oncontextmenu="return false;"></div>
       </div>
-      
+    </div>
   </div>
 
   <div class="page-actions">
@@ -54,6 +55,10 @@
     .then(res => res.text())
     .then(data => {
       document.getElementById('nav-placeholder').innerHTML = data;
+      const here = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('#nav-placeholder .nav-link').forEach(a => {
+        if (a.getAttribute('href') === here) a.classList.add('active');
+      });
     });
 </script>
 </body>

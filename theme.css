@@ -199,28 +199,36 @@ body .card-text  { color: var(--muted); }
 body .card-institute { color: var(--muted); }
 
 /* ---------- eyebrow (small label above headings) ---------- */
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
   color: var(--mint);
   background: rgba(46, 230, 189, 0.1);
   border: 1px solid rgba(46, 230, 189, 0.28);
   border-radius: 999px;
   padding: 5px 14px 5px 10px;
-  margin-bottom: 14px;
+  margin: 0 auto 14px;
 }
+
 .eyebrow::before {
   content: "";
-  width: 6px; height: 6px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--mint);
   box-shadow: 0 0 10px var(--mint);
 }
+
+
 .page-heading h1 {
   background: linear-gradient(120deg, #fff 30%, var(--indigo) 75%, var(--mint));
   -webkit-background-clip: text;
@@ -240,13 +248,36 @@ body .card-institute { color: var(--muted); }
   border-radius: 999px;
   border: 1px solid transparent;
 }
-.status-chip .dot { width: 7px; height: 7px; border-radius: 50%; }
 
-.status-chip.ongoing { color: var(--mint); background: rgba(46, 230, 189, 0.12); border-color: rgba(46, 230, 189, 0.3); }
-.status-chip.ongoing .dot { background: var(--mint); box-shadow: 0 0 0 0 rgba(46, 230, 189, 0.6); animation: ping 1.8s infinite; }
+.status-chip .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
 
-.status-chip.complete { color: var(--indigo); background: rgba(143, 148, 255, 0.12); border-color: rgba(143, 148, 255, 0.3); }
-.status-chip.complete .dot { background: var(--indigo); }
+/* Ongoing - Yellow */
+.status-chip.ongoing {
+  color: #ffd43b;
+  background: rgba(255, 212, 59, 0.12);
+  border-color: rgba(255, 212, 59, 0.3);
+}
+
+.status-chip.ongoing .dot {
+  background: #ffd43b;
+  box-shadow: 0 0 0 0 rgba(255, 212, 59, 0.6);
+  animation: ping 1.8s infinite;
+}
+
+/* Completed - Green */
+.status-chip.complete {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.status-chip.complete .dot {
+  background: #4ade80;
+}
 
 @keyframes ping {
   0%   { box-shadow: 0 0 0 0 rgba(46, 230, 189, 0.55); }
